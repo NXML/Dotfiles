@@ -1,6 +1,6 @@
 .PHONY: i3  install installdev installi3
 
-stow = cd config && stow  --adopt -v -t ~
+stow = cd config && stow  -v -t ~
 
 install:
 	xargs -d '\n' -a packages/package.list yay --noconfirm --needed -S
