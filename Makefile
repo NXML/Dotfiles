@@ -1,4 +1,4 @@
-.PHONY: i3 xfce install installdev installi3
+.PHONY: i3  install installdev installi3
 
 stow = cd config && stow  --adopt -v -t ~
 
@@ -19,5 +19,3 @@ i3:
 
 
 
-xfce:
-	# $(stow) xfce4
