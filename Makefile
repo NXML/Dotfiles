@@ -1,6 +1,6 @@
 .PHONY: i3 xfce install installdev installi3
 
-stow = cd config && stow  -v -t ~
+stow = cd config && stow  --adopt -v -t ~
 
 install:
 	xargs -d '\n' -a packages/package.list yay --noconfirm --needed -S
@@ -12,10 +12,12 @@ installdev: install
 	xargs -d '\n' -a packages/dev.list yay --noconfirm --needed -S
 
 i3:
-
+	$(stow) urxvt
+	xrdb ~/.Xresources
 	$(stow) i3
 	$(stow) rofi
 
 
+
 xfce:
-	$(stow) xfce4
+	# $(stow) xfce4
