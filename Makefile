@@ -15,6 +15,7 @@ i3:
 	$(stow) urxvt
 	xrdb ~/.Xresources
 	$(stow) i3
+	$(stop) i3status
 	$(stow) rofi
 
 
